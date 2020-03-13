@@ -5,3 +5,7 @@ __pycache__
 .env
 credentials
 .pytest_cache
+.vscode
+breast-histopathology-images
+saved-models
+df-backups
