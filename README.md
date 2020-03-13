@@ -27,6 +27,15 @@ The goal of our model is to **classify patches between *benign* and *malignant**
  - The **second risk** that we can encounter is that **the model classifies a patch as cancerous, while it is not**. In this case, the risk is limited, as a doctor will still check the patient folder, and will be able to exclude the bias. However, we should save doctors time as much as we can: this is the reason why **our secondary KPI will be the F1-Score** (*objective: strike a balance between False Positives and False Negatives*).
 
 #### MODEL APPROACH
+ 
+During a previous phase of this project, several Machine Learning approaches were tested on a 10% sample of the dataset:
+- Between all Machine Learning models, CatBoostClassifier is by far the best performing one.
+- The model performs better on RGB images than grayscale ones.
+- The use of dimensionality reduction techniques (PCA) did not improve model performance.
+- Combining image coordinates with predicted probabilities does not help the model (tendency to over-predict).
+- We did not notice a significant performance increase while doing affine transformations on images (flip, rotate, shear, etc.)
+
+*All these cul-de-sac let us think that **we might have reached the limits of traditional Machine Learning models for image classification tasks**. As a final step, we decided to re-train the "classic" CatBoostClassifier of the whole database, so that we can compare its overall performance with Convolutional Neural Networks.*
 
  - **Deep learning**: create a *Convolutional Neural Network* (CNN) using Tensorflow Keras
 	 - 2 convolutional layers of respectivly 32 and 64 filters
@@ -39,3 +48,7 @@ The goal of our model is to **classify patches between *benign* and *malignant**
 
  - **Deep learning**: Recall 80.2% (+7.9% vs. ML) , F1-Score 77.1% (+1.9% vs. ML)
  - **Machine Learning**: Recall 72.3%, F1-Score 75.2%
+ 
+ #### MAIN LIBRARIES
+ 
+ Tensorflow, Keras, Sickit-Learn, CatBoost, Skimage
