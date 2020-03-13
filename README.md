@@ -1,4 +1,4 @@
-## Predicting breast cancer from histological images
+## Predicting breast cancer from histological images with CNN
 
 *I was invited to present this project at **Ironhack Hackshow** on March 9th, 2020. The presentation that I made on that day is available on [this link](https://docs.google.com/presentation/d/1vuFhtWJBGZRugZyVPe-2B0tGljQkq8OjZ8Y5ygN2KhM/edit?usp=sharing). It was awarded **best Data Analytics project** of the cohort. It was the opportunity for me to learn how to deal with image data, and build my first CNN using Tensorflow.*
 
