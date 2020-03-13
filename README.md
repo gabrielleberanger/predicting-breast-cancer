@@ -11,11 +11,15 @@ My work is largely inspired from [Allunia's kernel](https://www.kaggle.com/allun
 
 The dataset  is composed of a **279 patients**, for which I had a set of **histological images** (50x50 pixels each), that were either **labeled as benign or malignant**. Each image was associated to an x and y coordinate, meaning that they could be plotted together to reconstitute a slide of patient's breast tissue.
 
+Visualization of patient tissues (each patient image is a combination of patches):
+
+![](https://raw.githubusercontent.com/gabrielleberanger/predicting-breast-cancer/master/graphs/EDA-patient-tissue.png)
+
 #### EXPLORATORY DATA ANALYSIS
 
 A large part of the work was to make the proper visualizations to get a good understanding of the dataset. To do do, I had to work deeply with images (combining patches to recreate patient tissues, highlighting malignant areas, etc.).
 
- - **The dataset is highly imbalanced**: regarding the number of malignant patches available per patient, the proportion of malignant patches per patients indicating different levels of severity, and the overall proportion total patches being benign (78%) or malignant (22%). It means that while building our train, validation and test sets, we should make sure to have a good representation of 1. patient severity levels and 2. malignant patches volumes.
+ - **The dataset is highly imbalanced**: regarding the number of malignant patches available per patient, the proportion of malignant patches per patients which indicates different levels of severity, and the overall proportion total patches being benign (78%) or malignant (22%). It means that while building our train, validation and test sets, we should make sure to have a good representation of 1. patient severity levels and 2. malignant patches volumes.
  - **Color seems to be a decisive information to spot cancerous patches**: they tend to be darker, and more purple than benign ones. But as some benign patches also appear to be dark, **color does not seem to be the only feature to consider in image classification**. Still, to build the model, it makes sense to keep images in  a RGB format (vs. grayscale that would loose significant info).
  - **Malignant patches are often grouped** into localized tumors.
  
