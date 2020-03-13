@@ -51,4 +51,4 @@ During a previous phase of this project, several Machine Learning approaches wer
  
  #### MAIN LIBRARIES
  
- Tensorflow, Keras, Sickit-Learn, CatBoost, Skimage
+ Tensorflow, Keras, Sickit-Learn, CatBoost, Skimage, Numpy
