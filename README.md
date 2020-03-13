@@ -23,6 +23,8 @@ A large part of the work was to make the proper visualizations to get a good und
  - **Color seems to be a decisive information to spot cancerous patches**: they tend to be darker, and more purple than benign ones. But as some benign patches also appear to be dark, **color does not seem to be the only feature to consider in image classification**. Still, to build the model, it makes sense to keep images in  a RGB format (vs. grayscale that would loose significant info).
  - **Malignant patches are often grouped** into localized tumors.
  
+![](https://raw.githubusercontent.com/gabrielleberanger/predicting-breast-cancer/master/graphs/EDA-imbalanced-dataset.png)
+ 
 #### MODEL OBJECTIVES
 
 The goal of our model is to **classify patches between *benign* and *malignant***.
