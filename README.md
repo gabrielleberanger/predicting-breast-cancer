@@ -19,7 +19,7 @@ Visualization of patient tissues (each patient image is a combination of patches
 
 A large part of the work was to make the proper visualizations to get a good understanding of the dataset. To do do, I had to work deeply with images (combining patches to recreate patient tissues, highlighting malignant areas, etc.).
 
- - **The dataset is highly imbalanced**: regarding the number of malignant patches available per patient, the proportion of malignant patches per patients which indicates different levels of severity, and the overall proportion total patches being benign (78%) or malignant (22%). It means that while building our train, validation and test sets, we should make sure to have a good representation of 1. patient severity levels and 2. malignant patches volumes.
+ - **The dataset is highly imbalanced, on 3 indicators**: the volume of patches available per patient, the proportion of malignant patches per patient (indicating different severity levels of the disease), and the overall proportion of total patches being benign (78%) or malignant (22%). It means that while building our train, validation and test sets, we should make sure to have a good representation of 1. patient severity levels and 2. malignant patches volumes.
  - **Color seems to be a decisive information to spot cancerous patches**: they tend to be darker, and more purple than benign ones. But as some benign patches also appear to be dark, **color does not seem to be the only feature to consider in image classification**. Still, to build the model, it makes sense to keep images in  a RGB format (vs. grayscale that would loose significant info).
  - **Malignant patches are often grouped** into localized tumors.
  
